@@ -1,0 +1,46 @@
+@import ./variaveis
+@import ./funcoes
+
+body 
+    font-family: $fonte
+    background-color: $cor-de-fundo
+    color: $cor-de-texto-primaria
+
+header, footer
+    background-color: $cor-primaria
+
+section
+    margin-bottom: 2rem
+
+img
+    display: block
+    max-width: 100%
+
+.container 
+    max-width: $container
+    margin: 0 auto
+    padding: 10px
+    box-sizing: border-box
+
+.btn
+    width: 200px
+    padding: 1rem
+    background-color: $cor-primaria
+    font-size: 1rem
+    color: $cor-de-texto-secundaria
+    border: none
+    border-radius: 3px
+    cursor: pointer
+    &:hover
+        background-color: $cor-terciaria
+
+.titulo-sessao
+    font-size: $tamanho-titulo-sessao
+    color: $cor-primaria
+    font-weight: bold
+    margin-bottom: 1rem
+
+.creditos
+    color: $cor-de-texto-secundaria
+    height: 100px
+    @include alinharConteudo(flex-start, center)

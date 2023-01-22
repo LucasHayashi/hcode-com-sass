@@ -1,0 +1,30 @@
+@import '../abstract/variaveis'
+
+.novidades
+    @include alinharConteudo(space-around, flex-start)
+    flex-direction: column
+    min-height: 350px
+    .novidades-items
+        @include alinharConteudo(center, stretch)
+        flex-wrap: wrap
+        gap: 1rem
+        .novidade
+            @include alinharConteudo(baseline, center)
+            flex-direction: column
+            flex: 1
+            min-width: 220px
+            text-align: center
+            background-color: $cor-primaria
+            color: $cor-secundaria
+            box-sizing: border-box
+            padding: 1rem
+            border-radius: 3px
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+            .icon 
+                margin: 0 auto
+                width: 64px
+            .info 
+                .title
+                    font-size: $tamanho-titulo-novidade
+                    font-weight: bold
+                    margin: 1rem 0

@@ -1,0 +1,35 @@
+@import ../abstract/variaveis
+@import ../abstract/funcoes
+
+nav 
+    height: 100px
+
+    @include alinharConteudo(space-between, center)
+
+    .logo 
+        font-size: $tamanho-logo
+        color: #fff
+        font-weight: bold
+
+    .menu 
+        display: flex
+        .menu-item
+            margin: 1rem
+        .menu-item a
+            color: #fff
+            text-decoration: none
+            &:hover
+                color: $cor-secundaria
+    .tema 
+        cursor: pointer
+
+@media (max-width: $layout-breakpoint-small)
+    nav
+        justify-content: space-evenly
+        flex-wrap: wrap
+        .logo
+            width: 100%
+            text-align: center
+        .menu 
+            .menu-item
+                margin: 0.25rem

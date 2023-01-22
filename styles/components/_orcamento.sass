@@ -1,0 +1,32 @@
+@import '../abstract/variaveis'
+
+.orcamento 
+    @include alinharConteudo(flex-start, flex-start)
+    flex-direction: column
+    min-height: 500px        
+    .formulario
+        label
+            display: flex
+            font-weight: bold
+            color: $cor-primaria
+            margin: 1rem 0
+        textarea
+            display: flex
+        input, textarea
+            min-width: 300px
+            border: 1px solid $cor-primaria
+            padding: 1rem
+            color: $cor-terciaria
+            font-size: 1rem
+            border-radius: 3px
+            &:focus
+                outline: 2px solid $cor-terciaria
+        .btn
+            margin-top: 1rem
+
+    @media (max-width: $layout-breakpoint-small)
+        .formulario
+            width: 100%
+            input, textarea
+                width: 100%
+                box-sizing: border-box
